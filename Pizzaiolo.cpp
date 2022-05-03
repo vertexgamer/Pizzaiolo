@@ -66,9 +66,9 @@ int main()
         }
         for (const auto& entry : fs::recursive_directory_iterator(cartella)) {    //it gets the path of the files inside the folder
             percorso = entry.path().string();
-            if (inizio == "\"") {
+            //if (inizio == "\"") {
                 percorso = "\"" + percorso + "\"";
-            }
+            //}
 
             while (argomenti.find("perin") != string::npos)
                 argomenti.replace(argomenti.find("perin"), 5, percorso);    //it replace "percorso" with the file path
